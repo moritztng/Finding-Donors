@@ -14225,10 +14225,11 @@ The adaptive boosting classifier has the highest F-score on the testing when 100
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> The AdaBoost classifier is not just another classifier. It is much more a ensemble of weak classifiers. But combined those weak classifiers form one strong classifier.</p>
+<p><strong>Answer:</strong> The AdaBoost classifier is not just another classifier. It is much more an ensemble of classifiers, that are really simple and therefore classifying poorly on their own. Hence, these classifiers are called weak classifiers. But combined those weak classifiers form one strong classifier.</p>
 <p>Each weak classifier is trained on a random subset of the training set. This concept is called bagging. Each weak classifier is punished harder for misclassified points of the previous classifiers. Therefore it is called adaptive boosting instead of boosting. The worst weak classifiers are those, that are correctly half of the time, because you don't gain any information from them. You gain more information from a classifiers, that is allways right or allways wrong. Therefore, while combining the weak classifiers to a strong classifier, the classifiers, that are correctly half of the time are weighted less than those, that tend to the both extremes.</p>
 <p>One of the major qualities of adaboost is, that it does not tend to overfitting and therefore generalizes well.</p>
-<p>In this case decision trees with a small depth are used as the weak classifiers.</p>
+<p>In this case decision trees with a small depth are used as the weak classifiers. Basically a decision tree is sequence of yes/no questions. After asking those yes/no questions the classifier knows the answer. The questions, that lead to the most informative answers are asked at first. The maximum number of questions asked is the depth of the decision tree. This is pretty similar to the game twenty questions.
+<a href="https://en.wikipedia.org/wiki/Twenty_Questions">https://en.wikipedia.org/wiki/Twenty_Questions</a></p>
 
 </div>
 </div>
